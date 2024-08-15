@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    100% 132.88% at 0% 3.17%,
+    rgba(0, 150, 255, 0.32) 0%,
+    rgba(255, 222, 106, 0.26) 100%
+  );
+  min-height: 100vh;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.app__title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding: 2rem;
+  background: #a5e0dd;
+  border-radius: 25px;
+  border: 3px solid #105955;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: min-height 0.3s ease;
+  border-radius: 10px;
+}
+
+.todo-list__header {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.todo-list__input,
+.todo-list__fetch-api,
+.todo-list__actions,
+.todo-list__filter {
+  margin-bottom: 20px;
+}
+
+.todo-list__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-list__input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+}
+
+.todo-list__input select,
+.todo-list__input button {
+  padding: 10px;
+}
+
+.todo-list__fetch-api {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-list__slider {
+  width: 100%;
+  max-width: 300px;
+}
+
+.todo-list__filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.todo-list__filter select {
+  padding: 10px 20px;
+  background-color: #105955;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.todo-list__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.todo-list__table th,
+.todo-list__table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.todo-list__no-tasks {
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .todo-list__input {
+    flex-direction: column;
+  }
+
+  .todo-list__input select,
+  .todo-list__input button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .todo-list__fetch-api {
+    flex-direction: column;
+  }
+
+  .todo-list__fetch-api button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

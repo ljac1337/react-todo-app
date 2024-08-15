@@ -1,0 +1,268 @@
+/* Base styles (for desktops) */
+
+/* Container for the input section */
+.todo-list__input {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.todo-list__input input[type="text"] {
+  flex: 1; /* Take up available space */
+  padding: 10px;
+  border: 2px solid #105955;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding and border in width and height */
+}
+
+.todo-list__input input[type="text"]:focus {
+  outline: none;
+  border-color: #20b2aa;
+}
+
+/* Select dropdown styling */
+.todo-list__input select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Add Task button styling */
+.todo-list__input button {
+  padding: 10px 20px;
+  background-color: #20b2aa; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-list__input select {
+  padding: 10px 20px;
+  background-color: #105955;
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-list__input button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.todo-list__input button:active {
+  background-color: #1e7e34; /* Even darker green when clicked */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+.todo-list__input button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Custom focus shadow */
+}
+
+/* Container for the fetch API section */
+.todo-list__fetch-api {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slider styling */
+.todo-list__slider {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+/* Fetch button styling */
+.todo-list__fetch-button {
+  padding: 10px 20px;
+  background-color: #2071b2; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.todo-list__fetch-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.todo-list__fetch-button:active {
+  background-color: #00408a; /* Even darker blue when clicked */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+.todo-list__fetch-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Custom focus shadow */
+}
+
+/* Header for completed tasks info */
+.todo-list__header {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styling for the task table */
+.todo-list__table {
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width for the table */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Styling for table headers */
+.todo-list__table th,
+.todo-list__table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.todo-list__table th {
+  background-color: #f4f4f4;
+}
+
+/* Styling for manually added tasks */
+.todo-list__table .task-manual {
+  background-color: #d4edda; /* Light green background */
+}
+
+/* Styling for fetched tasks */
+.todo-list__table .task-fetched {
+  background-color: #cce5ff; /* Light blue background */
+}
+
+/* Completed tasks styling */
+.todo-list__table .task-completed {
+  text-decoration: line-through; /* Strikethrough text for completed tasks */
+  color: #6c757d; /* Gray color for completed tasks */
+}
+
+/* Action buttons styling */
+.todo-list__actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.todo-list__actions button {
+  padding: 10px 15px;
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-list__actions button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.todo-list__actions button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Custom focus shadow */
+}
+
+/* Tablet styles (up to 768px) */
+@media (max-width: 768px) {
+  .todo-list__input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-list__input input[type="text"] {
+    margin-bottom: 10px;
+  }
+
+  .todo-list__input select {
+    margin-bottom: 10px;
+  }
+
+  .todo-list__fetch-api {
+    align-items: stretch;
+  }
+
+  .todo-list__slider {
+    max-width: 100%;
+  }
+
+  .todo-list__table th,
+  .todo-list__table td {
+    padding: 8px;
+  }
+
+  .todo-list__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .todo-list__actions button {
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile styles (up to 480px) */
+@media (max-width: 480px) {
+  .todo-list__input {
+    gap: 5px;
+  }
+
+  .todo-list__input input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .todo-list__input select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .todo-list__input button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .todo-list__fetch-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .todo-list__header {
+    font-size: 18px;
+  }
+
+  .todo-list__table th,
+  .todo-list__table td {
+    padding: 6px;
+  }
+
+  .todo-list__actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .todo-list__actions button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

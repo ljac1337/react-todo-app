@@ -1,0 +1,40 @@
+.todo-item--api {
+  background-color: rgba(0, 150, 255, 0.32);
+}
+
+.todo-item--manual {
+  background-color: rgba(255, 222, 106, 0.26);
+}
+
+.todo-item__status {
+  cursor: pointer;
+  text-align: center;
+  width: 10px;
+}
+
+.todo-item__text--completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item__priority {
+  width: 10px;
+}
+
+.todo-item__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-item__actions button {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-item__actions button:hover {
+  background-color: #c0392b;
+}
