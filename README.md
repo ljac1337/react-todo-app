@@ -48,3 +48,7 @@ npm run dev
 # or
 yarn dev
 ```
+
+### App demo
+
+https://react-todo-app-zeta-rust.vercel.app/
