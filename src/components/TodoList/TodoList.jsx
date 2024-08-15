@@ -12,36 +12,15 @@ const TodoList = () => {
   const [apiTaskCount, setApiTaskCount] = useState(5);
   const [filter, setFilter] = useState("all");
 
-  /*
-  useEffect(() => {
-    if (tasks.length > 0) {
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-    } else {
-      localStorage.removeItem("tasks");
-    }
-  }, [tasks]);
-
-  useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem("tasks"));
-    if (storedTasks) {
-      setTasks(storedTasks);
-    } else {
-      setTasks([]);
-    }
-  }, []);
-*/
-
-  // Load tasks from localStorage on component mount
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks"));
     if (storedTasks && storedTasks.length > 0) {
       setTasks(storedTasks);
     } else {
-      setTasks([]); // Ensure tasks is at least an empty array
+      setTasks([]);
     }
   }, []);
 
-  // Save tasks to localStorage whenever tasks array changes
   useEffect(() => {
     if (tasks && tasks.length > 0) {
       localStorage.setItem("tasks", JSON.stringify(tasks));
